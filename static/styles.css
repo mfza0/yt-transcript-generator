@@ -1,0 +1,81 @@
+body{
+    background-image: url('download.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.main{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    position: relative;
+}
+
+*{
+ color: aliceblue;
+}
+.main1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.FieldBox {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid;
+    height: 20px;
+    padding: 3px;
+}
+.runButton {
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 4px;
+}
+.output_text {
+    padding-top:20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.backButton {
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 4px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.backButton:hover {
+    opacity : 0.7;
+}
+
+.runButton:hover {
+    opacity : 0.7;
+}
+
+.anim{
+ opacity: 0;
+ transform: translateY(30px) ;
+ animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup {
+    100%{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+.middle {
+    animation-delay: 0.5s;
+}
+.run {
+    padding: 40px;
+    animation-delay:1s ;
+}
+.main_title{
+    animation-delay: 0.1s;
+}

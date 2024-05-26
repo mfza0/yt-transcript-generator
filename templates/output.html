@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    <script>
+    window.onload= function(){
+        if (window.performance && window.performance.navigation.type==1){
+            window.location.href='/';
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="output_text">{{text}}</div>
+    <button class="backButton" onclick="window.location.href='/'">
+        Back
+    </button>
+</body>
+</html>

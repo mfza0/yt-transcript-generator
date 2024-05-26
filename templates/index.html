@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    <script>
+        window.onload= function(){
+            if (window.performance && window.performance.navigation.type==1){
+                window.location.href='/';
+            }
+        };
+        function disableButton() {
+            var inputField= document.getElementsByName('input')[0];
+            var inputValue=inputField.value;
+            inputField.disabled =true;
+            inputField.setAttribute(inputValue)
+            document.getElementById("runButton").disabled = true;
+        }
+
+        function enableButton(){
+            var inputField =document.getElementsByName('input')[0];
+            inputField.disabled =false;
+            inputField.value="";
+            document.getElementById('runButton').disabled = false;
+        }
+
+        window.onload=enableButton();
+        
+    </script>
+</head>
+<body>
+    <div class="main">
+     <div class="main1">
+        <div class="main_title anim">
+           <h1> YouTube Transcript Generator </h1>
+        </div><br><br>
+            
+        <form action="/run_script" method="post" onsubmit="disableButton()">
+            <div class="middle anim">
+         <label for="video_Id" class="FieldLabel"font>Enter Video ID&nbsp;&nbsp;</label>
+         <input type="text" id="video_Id" name="video_Id" class="FieldBox"/>
+         </div><br>
+         <div class="run anim">
+         <button type="submit" class="runButton" id="runButton">Generate Transcript</button>
+         </div>
+        </form>
+        <br>
+    <div class="transcript_text">
+    
+    </div>
+    </div>
+    </div>
+</body>
+</html>
